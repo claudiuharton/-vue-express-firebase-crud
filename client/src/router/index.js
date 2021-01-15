@@ -1,21 +1,11 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createWebHistory, createRouter } from "vue-router";
 import Movies from '@/components/Movies'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
-import MoviePage from '../components/MoviePage'
+import MoviePage from '@/components/MoviePage'
 
-Vue.use(Router)
-
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      redirect: {
-        name: 'Login'
-      }
-    },
+const routes = [
+    
     {
       path: '/login',
       name: 'Login',
@@ -35,6 +25,11 @@ export default new Router({
       path: '/movie/:id',
       name: 'MoviePage',
       component: MoviePage
-    }
-  ]
-})
+    } ];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+export default router;
