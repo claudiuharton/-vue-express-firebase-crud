@@ -15,7 +15,7 @@
     "firebase": "^8.2.2",
     "firebase-admin": "^9.4.2",
     "jsonwebtoken": "^8.4.0",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.21"
   },
   "author": "",
   "license": "ISC"
